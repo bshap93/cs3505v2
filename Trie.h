@@ -13,9 +13,11 @@ public:
   void addAWord(std::string word);
   bool isAWord(std::string word);
   std::vector<std::string> allWordsStartingWithPrefix(std::string prefix);
+
+private:
   int letterToInt(char letter);
   char intToLetter(int num);
-private:
+  std::vector<std::string> returnAllFromNode(Trie *ptr, std::vector<std::string> &vec, std::string prefix);
   Trie* addAWordHelper(std::string word);
   bool isWord;
   Trie* trieArray[26];
